@@ -73,11 +73,11 @@ namespace LinkedListMainProject.LinkedListNodeClass
                 return NodeToReturn;
 
             //if newCounter after reaching to end of the linked list is greater than 1 it means it has that many numbers of linked list items need to tranverse to reach to final nth element from the end of linked list
-            int c = 1;
-            while (c <= newCounter)
+            int cnt = 1;
+            while (cnt <= newCounter)
             {
                 NodeToReturn = NodeToReturn.next;
-                c++;
+                cnt++;
             }
             return NodeToReturn;
         }

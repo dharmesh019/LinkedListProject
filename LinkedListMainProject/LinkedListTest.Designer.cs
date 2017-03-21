@@ -110,7 +110,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblLinkedListItems);
             this.Name = "LinkedListTest";
-            this.Text = "Form1";
+            this.Text = "LinkedList Project";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
