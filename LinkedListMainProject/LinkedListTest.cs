@@ -49,10 +49,13 @@ namespace LinkedListMainProject
             {
                 lblErrorMessage.Text = "";
                 lblNthElementFromEnd.Text = "";
-                int NthElementNumber = Convert.ToInt16( txtNthElementFromtheLinkedList.Text);
+                int NthElementNumber = Convert.ToInt16(txtNthElementFromtheLinkedList.Text);
                 //here validation of entered position is not the main focus of the project so directly adding validtion  in the main project level as below
-                if (NthElementNumber > lnklist.Counter || NthElementNumber < 1)
-                    lblErrorMessage.Text = "Please enter Nth Element within predefined linked list items added!";
+                if (NthElementNumber > lnklist.Counter || NthElementNumber < 1) // number must be with in predefined linked list int items position
+                { 
+                lblErrorMessage.Text = "Please enter Nth Element within predefined linked list items added!";
+                txtNthElementFromtheLinkedList.Text = "";
+                }
                 else
                 {
                     //getting Nth element from the end of linked list using best possible traverse method
@@ -63,7 +66,7 @@ namespace LinkedListMainProject
             catch
             {
                 lblErrorMessage.Text = "Please enter valid interget number position!";
-               
+                txtNthElementFromtheLinkedList.Text = "";
             }
             // resultedNode.data;
         }
