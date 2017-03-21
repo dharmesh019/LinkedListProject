@@ -59,20 +59,22 @@ namespace LinkedListMainProject.LinkedListNodeClass
             while (current != null) // loop for all added linked list points here 
             {
                 current = current.next;
-                newCounter++;
+               
                 if (newCounter > n) // if counter greater than passed n number which is nth element from the end of linked list
                 {
                     newCounter = 1; // Reset the newcounter to 1 here to start again calculating until counter reaches the nth number passed
                     NodeToReturn = temp; // first time it will be temp node initalized outside the while loop  //other times it will be previously set values
                     temp = current; // here it changes to point to current node which will be in multiple of nth linkedlist items
                 }
+                else
+                newCounter++;
             }
             if (NodeToReturn == null)
                 return NodeToReturn;
 
             //if newCounter after reaching to end of the linked list is greater than 1 it means it has that many numbers of linked list items need to tranverse to reach to final nth element from the end of linked list
             int c = 1;
-            while (c < newCounter)
+            while (c <= newCounter)
             {
                 NodeToReturn = NodeToReturn.next;
                 c++;
